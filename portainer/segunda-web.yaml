@@ -1,0 +1,8 @@
+# Stack desplegado desde Portainer (Stacks > Add stack > Web editor).
+# Reutiliza la imagen mi-web construida previamente, porque el editor
+# de Portainer no tiene acceso a la carpeta del proyecto para hacer build.
+services:
+  web2:
+    image: mi-web
+    ports:
+      - "8081:80"

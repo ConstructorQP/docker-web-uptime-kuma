@@ -1,0 +1,15 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:80"
+
+  vigilante:
+    image: louislam/uptime-kuma:2
+    ports:
+      - "3001:3001"
+    volumes:
+      - datos_kuma:/app/data
+
+volumes:
+  datos_kuma:
